@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">    
+</head>
+<body>
+<h1>This is your top 5 search results</h1>
+    <ol type="1">
+        {% for i in link_list %}
+            <li><p><b>Book Title : </b> {{i[0]}}<br><b>Description :</b> {{i[1]}}<br><img src={{i[2]}}, class="thumb"><br></p></li>
+        {% endfor %}
+    </ol>
+<p><a href="/">Return to Search</a></p>    
+</body>
+</html>

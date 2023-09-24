@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Search Your Books Here</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+
+</head>
+<body>
+  <img src="{{ url_for('static', filename='books-small.jpeg')}}", class="center">
+  <div class="byline">Simple Search Engine powered by Google Generative AI</div>  
+  <div id="gradient"></div>
+    <form class="searchbox" action="search" method="POST">
+        <input type="search" placeholder="What books are you looking for?" name="search_term" id="sterm" />
+        <button type="submit" value="search">&nbsp</button>
+    </form>
+</body>
+</html>
